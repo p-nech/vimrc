@@ -10,6 +10,8 @@
    call plug#end()
 
    " --------------------------------CONFIGS----------------------------- "
+   let mapleader = ','
+
    autocmd FileType json syntax match Comment +\/\/.\+$+
    map <C-n> :NERDTreeToggle<CR>
 				       
@@ -20,12 +22,12 @@
    map =+p <C-v> 
 	
    "---------------------------SMART CLIPBOARD----------------------------"
-   vnoremap ,y "+y
-   vnoremap ,y "+yy
-   vnoremap ,d "+d
-   nnoremap ,d "+dd
-   vnoremap ,p "+p
-   nnoremap ,p "+p
-   vnoremap ,P "+P
-   nnoremap ,P "+P
+   vnoremap <Leader>y "+y
+   vnoremap <Leader>y "+yy
+   vnoremap <Leader>d "+d
+   nnoremap <Leader>d "+dd
+   vnoremap <Leader>p "+p
+   nnoremap <Leader>p "+p
+   vnoremap <Leader>P "+P
+   nnoremap <Leader>P "+P
 
