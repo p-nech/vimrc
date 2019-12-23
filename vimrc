@@ -6,9 +6,10 @@
    Plug 'neoclide/coc.nvim', {'do': 'apt install --frozen-lockfile'}
    Plug 'scrooloose/nerdtree'
    Plug 'scrooloose/nerdcommenter'
-
+   Plug 'bling/vim-airline' 
+   
    call plug#end()
-
+   
    " --------------------------------CONFIGS----------------------------- "
    let mapleader = ','
 
