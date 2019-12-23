@@ -7,7 +7,8 @@
    Plug 'scrooloose/nerdtree'
    Plug 'scrooloose/nerdcommenter'
    Plug 'bling/vim-airline' 
-   
+   Plug 'terryma/vim-multiple-cursors'
+
    call plug#end()
    
    " --------------------------------CONFIGS----------------------------- "
