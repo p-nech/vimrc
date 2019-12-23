@@ -5,7 +5,8 @@
    Plug 'sheerun/vim-polyglot'
    Plug 'neoclide/coc.nvim', {'do': 'apt install --frozen-lockfile'}
    Plug 'scrooloose/nerdtree'
-   
+   Plug 'scrooloose/nerdcommenter'
+
    call plug#end()
 
    " --------------------------------CONFIGS----------------------------- "
