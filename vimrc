@@ -7,7 +7,8 @@
    Plug 'scrooloose/nerdtree'
    
    call plug#end()
-		        
+
+   " --------------------------------CONFIGS----------------------------- "
    autocmd FileType json syntax match Comment +\/\/.\+$+
    map <C-n> :NERDTreeToggle<CR>
 				       
@@ -16,3 +17,14 @@
    set ic
    set is
    map =+p <C-v> 
+	
+   "---------------------------SMART CLIPBOARD----------------------------"
+   vnoremap ,y "+y
+   vnoremap ,y "+yy
+   vnoremap ,d "+d
+   nnoremap ,d "+dd
+   vnoremap ,p "+p
+   nnoremap ,p "+p
+   vnoremap ,P "+P
+   nnoremap ,P "+P
+
