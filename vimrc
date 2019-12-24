@@ -1,4 +1,5 @@
    set nocompatible             " be iMproved, required
+   set hidden			" for editing multiple buffers
    filetype off                 " required
    call plug#begin('~/.vim/plugged')
 
@@ -8,7 +9,10 @@
    Plug 'scrooloose/nerdcommenter'
    Plug 'bling/vim-airline' 
    Plug 'terryma/vim-multiple-cursors'
-
+   Plug 'tpope/vim-surround'
+   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+   Plug 'junegunn/fzf.vim'
+   
    call plug#end()
    
    " --------------------------------CONFIGS----------------------------- "
@@ -17,7 +21,7 @@
    autocmd FileType json syntax match Comment +\/\/.\+$+
    map <C-n> :NERDTreeToggle<CR>
 				       
-   " set langmap=!\\"№\\;%?*ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;!@#$%&*`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
+   "set langmap=!\\"№\\;%?*ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;!@#$%&*`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
    set mouse=a
    set ic
    set is
@@ -26,6 +30,7 @@
    "---------------------------SMART CLIPBOARD----------------------------"
    vnoremap <Leader>y "+y
    vnoremap <Leader>y "+yy
+   nnoremap <Leader>y "+yy
    vnoremap <Leader>d "+d
    nnoremap <Leader>d "+dd
    vnoremap <Leader>p "+p
