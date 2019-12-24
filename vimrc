@@ -1,16 +1,18 @@
    set nocompatible             " be iMproved, required
    set hidden			" for editing multiple buffers
+   set nobackup
+   set nowritebackup
    filetype off                 " required
    call plug#begin('~/.vim/plugged')
 
-   Plug 'sheerun/vim-polyglot'
-   Plug 'neoclide/coc.nvim', {'do': 'apt install --frozen-lockfile'}
-   Plug 'scrooloose/nerdtree'
-   Plug 'scrooloose/nerdcommenter'
-   Plug 'bling/vim-airline' 
-   Plug 'terryma/vim-multiple-cursors'
-   Plug 'tpope/vim-surround'
-   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+   Plug 'sheerun/vim-polyglot'					     " Language pack for Vim
+   Plug 'neoclide/coc.nvim', {'do': 'apt install --frozen-lockfile'} " IntelliSense (needs further tinkering with configs)
+   Plug 'scrooloose/nerdtree'					     " Display files and folders
+   Plug 'scrooloose/nerdcommenter'				     " For easier commenting
+   Plug 'bling/vim-airline' 					     " Cool statusbar
+   Plug 'terryma/vim-multiple-cursors'				     " Multiple cursors like in Sublime Text
+   Plug 'tpope/vim-surround' 					     " Surround text object with parentheses, tags, etc.	
+   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Fuzzy file search
    Plug 'junegunn/fzf.vim'
    
    call plug#end()
@@ -38,3 +40,10 @@
    vnoremap <Leader>P "+P
    nnoremap <Leader>P "+P
 
+   "--------------------------AUTO CLOSING--------------------------------" 
+   "inoremap (; (<CR>);<C-c>O
+   "inoremap (, (<CR>),<C-c>O
+   "inoremap {; {<CR>};<C-c>O
+   "inoremap {, {<CR>},<C-c>O
+   "inoremap [; [<CR>];<C-c>O
+   "inoremap [, [<CR>],<C-c>O
