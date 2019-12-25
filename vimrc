@@ -1,7 +1,4 @@
    set nocompatible             " be iMproved, required
-   set hidden			" for editing multiple buffers
-   set nobackup
-   set nowritebackup
    filetype off                 " required
    call plug#begin('~/.vim/plugged')
 
@@ -27,6 +24,10 @@
    set mouse=a
    set ic
    set is
+   set hidden			" for editing multiple buffers
+   set nobackup
+   set nowritebackup
+   set incsearch
    map =+p <C-v> 
 	
    "---------------------------SMART CLIPBOARD----------------------------"
@@ -39,11 +40,13 @@
    nnoremap <Leader>p "+p
    vnoremap <Leader>P "+P
    nnoremap <Leader>P "+P
-
-   "--------------------------AUTO CLOSING--------------------------------" 
-   "inoremap (; (<CR>);<C-c>O
-   "inoremap (, (<CR>),<C-c>O
-   "inoremap {; {<CR>};<C-c>O
-   "inoremap {, {<CR>},<C-c>O
-   "inoremap [; [<CR>];<C-c>O
-   "inoremap [, [<CR>],<C-c>O
+   
+   "-------------------------AUTO BRACKETS--------------------------------"
+   
+   inoremap " ""<left>
+   inoremap ' ''<left>
+   inoremap ( ()<left>
+   inoremap [ []<left>
+   inoremap { {}<left>
+   inoremap {<CR> {<CR>}<ESC>O
+   inoremap {;<CR> {<CR>};<ESC>O
