@@ -11,7 +11,8 @@
    Plug 'tpope/vim-surround' 					     " Surround text object with parentheses, tags, etc.	
    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Fuzzy file search
    Plug 'junegunn/fzf.vim'
-   
+   Plug 'gregsexton/matchtag'
+
    call plug#end()
    
    " --------------------------------CONFIGS----------------------------- "
@@ -28,7 +29,6 @@
    set nobackup
    set nowritebackup
    set incsearch
-   map =+p <C-v> 
 	
    "---------------------------SMART CLIPBOARD----------------------------"
    vnoremap <Leader>y "+y
