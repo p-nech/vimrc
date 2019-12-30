@@ -1,4 +1,5 @@
    set nocompatible             " be iMproved, required
+   set t_Co=256
    filetype off                 " required
    call plug#begin('~/.vim/plugged')
 
@@ -7,11 +8,12 @@
    Plug 'scrooloose/nerdtree'					     " Display files and folders
    Plug 'scrooloose/nerdcommenter'				     " For easier commenting
    Plug 'bling/vim-airline' 					     " Cool statusbar
+   Plug 'vim-airline/vim-airline-themes'
    Plug 'terryma/vim-multiple-cursors'				     " Multiple cursors like in Sublime Text
    Plug 'tpope/vim-surround' 					     " Surround text object with parentheses, tags, etc.	
    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Fuzzy file search
    Plug 'junegunn/fzf.vim'
-   Plug 'gregsexton/matchtag'
+   Plug 'gregsexton/matchtag'                                        " Почему-то не подсвечиваются теги, которые находятся на удалении друг от друга
 
    call plug#end()
    
