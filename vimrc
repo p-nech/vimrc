@@ -1,5 +1,4 @@
    set nocompatible             " be iMproved, required
-   set t_Co=256
    filetype off                 " required
    call plug#begin('~/.vim/plugged')
 
@@ -7,14 +6,13 @@
    Plug 'neoclide/coc.nvim', {'do': 'apt install --frozen-lockfile'} " IntelliSense (needs further tinkering with configs)
    Plug 'scrooloose/nerdtree'					     " Display files and folders
    Plug 'scrooloose/nerdcommenter'				     " For easier commenting
-   Plug 'bling/vim-airline' 					     " Cool statusbar
+   Plug 'vim-airline/vim-airline' 				     " Cool statusbar
    Plug 'vim-airline/vim-airline-themes'
-   Plug 'terryma/vim-multiple-cursors'				     " Multiple cursors like in Sublime Text
    Plug 'tpope/vim-surround' 					     " Surround text object with parentheses, tags, etc.	
    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Fuzzy file search
    Plug 'junegunn/fzf.vim'
    Plug 'gregsexton/matchtag'                                        " Почему-то не подсвечиваются теги, которые находятся на удалении друг от друга
-
+   Plug 'tpope/vim-fugitive'
    call plug#end()
    
    " --------------------------------CONFIGS----------------------------- "
@@ -22,6 +20,7 @@
 
    autocmd FileType json syntax match Comment +\/\/.\+$+
    map <C-n> :NERDTreeToggle<CR>
+   let g:airline#extensions#tabline#enabled = 1
 				       
    "set langmap=!\\"№\\;%?*ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;!@#$%&*`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
    set mouse=a
@@ -31,6 +30,7 @@
    set nobackup
    set nowritebackup
    set incsearch
+   set t_Co=256                 " fix coloring
 	
    "---------------------------SMART CLIPBOARD----------------------------"
    vnoremap <Leader>y "+y
