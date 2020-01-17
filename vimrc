@@ -20,6 +20,7 @@
 
    autocmd FileType json syntax match Comment +\/\/.\+$+
    map <C-n> :NERDTreeToggle<CR>
+   inoremap ;; <C-^>
    let g:airline#extensions#tabline#enabled = 1
 				       
    "set langmap=!\\"№\\;%?*ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;!@#$%&*`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
