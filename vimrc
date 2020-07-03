@@ -63,6 +63,7 @@
    
    " Base64 encode and decode
    vnoremap <leader>64 y:enew<cr>i<c-r>=system('base64 --decode', @")<cr><esc>
+   " To do: fix encode
    vnoremap <leader>e64 y:enew<cr>i<c-r>=system('base64', @")<cr><esc>
 
    "------------------------FOR SESSION SAVE-----------------------------"
