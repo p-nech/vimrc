@@ -58,6 +58,8 @@
    inoremap {<CR> {<CR>}<ESC>O
    inoremap {;<CR> {<CR>};<ESC>O
 
+   "----------------------------MISC----------------------------------------"
+
    " Autoindent XML
    nnoremap <leader>x ggVG:!xmllint --format -<cr>
    
@@ -65,6 +67,11 @@
    vnoremap <leader>64 y:enew<cr>i<c-r>=system('base64 --decode', @")<cr><esc>
    " To do: fix encode
    vnoremap <leader>e64 y:enew<cr>i<c-r>=system('base64', @")<cr><esc>
+
+   " Fuzzy File Search
+   nnoremap ; :Buffers<cr>
+   nnoremap <Leader>t :Files<CR>
+   nnoremap <Leader>r :Tags<CR>
 
    "------------------------FOR SESSION SAVE-----------------------------"
    function! MakeSession()
