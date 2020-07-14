@@ -36,6 +36,7 @@
    set nowritebackup
    set incsearch
    set t_Co=256                 " fix coloring
+   set tabstop=4 shiftwidth=4 expandtab " tab is 4 spaces
 	
    "---------------------------SMART CLIPBOARD----------------------------"
    vnoremap <Leader>y "+y
